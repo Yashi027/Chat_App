@@ -1,12 +1,13 @@
 import React from 'react';
 import './RightSidebar.css'
 import assets from '../../assets/assets.js';
+import { Link } from 'react-router-dom';
 
 const RightSidebar = () => {
   return (
     <div className='rs'>
       <div className="rs-profile">
-        <img src={assets.profile_img} alt="" />
+        <Link to='/profile'><img src={assets.profile_img} alt="" /></Link>
         <h3>Richard <img src={assets.green_dot} className='dot' alt="" /></h3>
         <p>Hey, I am using ChatApp</p>
       </div>
@@ -20,7 +21,7 @@ const RightSidebar = () => {
           <img src={assets.pic4} alt="" />
         </div>
       </div>
-      <button>Logout</button>
+      <Link to='/'><button>Logout</button></Link>
     </div>
   );
 }
